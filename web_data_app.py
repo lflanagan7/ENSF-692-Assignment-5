@@ -84,7 +84,7 @@ def book_data():
     book_data = pd.DataFrame(list(zip(titles, prices)), columns=['Titles','Prices'])   
 
     # Create new column with sale price (reduced by 25%)
-    book_data["Sale Prices"] = book_data["Prices"] * 0.75
+    book_data["Sale Prices"] = (book_data["Prices"] * 0.75).map('{:,.2f}'.format)
     print(book_data)        # Print to the terminal as confirmation - only we can see this
 
     # Format and print the DataFrame using the html template provided in the templates subdirectory
@@ -96,8 +96,8 @@ def learn():
    return "I learned how to create and perform operations on DataFrames in ENSF 692."
 
 
-# app.run(debug = True)
-# app.route(hello_there("Laurel"), book_data(), learn())
+app.run(debug = True)
+
 
 
 
