@@ -93,7 +93,7 @@ def book_data():
 @app.route("/learn")
 def learn():
     # Return a string the describes one thing I learned in ENSF 692.
-   return "I learned how to create and perform operations on DataFrames in ENSF 692."
+   return "I learned how to create and perform various operations on Arrays, Series, and DataFrames in ENSF 692."
 
 
 app.run(debug = True)
